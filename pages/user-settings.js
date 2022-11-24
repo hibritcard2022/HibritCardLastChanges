@@ -11,7 +11,6 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
 //for time picker
-import dayjs from 'dayjs';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -165,7 +164,6 @@ function UserSettings() {
     }
 
     //for time pişcker
-    const [value, setValue] = React.useState(dayjs('2014-08-18'));
 
   const handleChange = (newValue) => {
     setValue(newValue);
@@ -555,7 +553,8 @@ Email boş olamaz!
         
         <MobileDatePicker
          
-          inputFormat="MM/DD/YYYY"
+        //   inputFormat="MM/DD/YYYY"
+          inputFormat="DD/MM/YYYY"
         //   value={value}
           value={userValues && userValues.birthDate}
         //   onChange={handleChange}
